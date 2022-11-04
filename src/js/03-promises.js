@@ -22,7 +22,7 @@ const formHandler = (el)=>{
 let delay = +(target.elements.delay.value);
 const step = +(target.elements.step.value);
 const amount = +(target.elements.amount.value);
-for (let i = 0; i < amount; i++){
+for (let i = 0; i <= amount; i++){
   createPromise( i,delay)
     .then(({position,delay})=>{
       Notiflix.Notify.success(` Fulfilled promise ${position} in ${delay}ms`)
